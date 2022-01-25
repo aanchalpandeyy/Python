@@ -1,0 +1,70 @@
+*****ASSIGNMENT 2.0*****
+1. Functions/Methods of dictionary From w3schools
+    **car =	{
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+    }**
+    *car.clear() --> {}
+    *car.copy() --> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+    *car.get(brand) --> Ford
+    *car.items() --> dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+    *car.keys() --> dict_keys(['brand', 'model', 'year'])
+    *car.pop("brand") --> {'brand': 'Ford', 'year': 1964}
+    *car.popitem() --> {'brand': 'Ford', 'model': 'Mustang'}
+    *car.update({"color": "White"}) --> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'White'}
+    *car.values() --> dict_values(['Ford', 'Mustang', 1964])
+    
+2. Create a Set - refer From w3schools
+    myset = {"piano", "guitar", "flute"}
+        thisset = {"piano", "guitar", "flute"}
+        print(thisset) --> {'piano' , 'guitar' , 'flute'}
+        
+        thisset = {"piano", "guitar", "flute", "piano"}
+        print(thisset) --> {'piano', 'guitar', 'flute'}
+        
+        thisset = {"piano", "guitar", "flute"}
+        print(thisset) --> 3
+        
+3. Filename extension - MyCaptain app
+   hint: function of string - do Not use repr
+       import os
+       split_tup = os.path.splitext('my_file.txt')
+       print(split_tup)
+       file_name = split_tup[0]
+       file_extension = split_tup[1]
+       print("File Name: ", file_name)
+       print("File Extension: ", file_extension)
+
+4. Create your own calculator using If conditions And Functions
+    def add(x, y):
+    return x + y
+    def subtract(x, y):
+    return x - y
+    def multiply(x, y):
+    return x * y
+    def divide(x, y):
+    return x / y
+    print("Select operation.")
+    print("1.Add")
+    print("2.Subtract")
+    print("3.Multiply")
+    print("4.Divide")
+    while True:
+    choice = input("Enter choice(1/2/3/4): ")
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        next_calculation = input("Time for another calculation (yes/no): ")
+        if next_calculation == "no":
+          break
+    else:
+        print("Invalid Input")
